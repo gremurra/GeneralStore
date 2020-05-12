@@ -11,7 +11,7 @@ namespace GeneralStore.MVC.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
-        // GET: Customer
+        // GET: Customer/Index
         public ActionResult Index()
         {
             List<Customer> customerList = _db.Customers.ToList();
@@ -25,19 +25,19 @@ namespace GeneralStore.MVC.Controllers
             return View();
         }
 
-        // POST: Customer/Create
+        //POST: Customer/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Customer customer)
         {
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
-                _db.Customers.Add(customer);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+               _db.Customers.Add(customer);
+               _db.SaveChanges();
+               return RedirectToAction("Index");
             }
 
-            return View(customer);
+           return View(customer);
         }
     }
 }
