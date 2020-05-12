@@ -2,19 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>General Store</h1>
-    <p class="lead">Welcome to our General Store! Buy stuff at great low prices every single day! This is Red Badge Walkthrough exercise at Eleven Fifty Academy.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>General Store</h1>
+        <p class="lead">Welcome to our General Store! Buy stuff at great low prices every single day! This is Red Badge Walkthrough exercise at Eleven Fifty Academy.</p>
+        @Html.ActionLink("Learn More About Us", "About")
+    </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting Started</h2>
+        <h2>Products</h2>
         <p>
-            Click on the navbar button link to buy products from our store!
+            Our General Store, located in rural Indiana, is host to a multitude of fine food and items of distinction.<br />
+            Come browse our products and see what we have for you.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        @Html.ActionLink("Check Products", "Index", "Product", null, new { @class = "btn btn-primary btn-large" })
     </div>
     <div class="col-md-4">
         <h2>Get More Information</h2>
@@ -23,7 +24,7 @@
     </div>
     <div class="col-md-4">
         <h2>Get In Touch</h2>
-        <p>Click here to contact the owners of Geral Store with any comments or concerns.</p>
+        <p>Click here to contact the owners of General Store with any comments or concerns.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
